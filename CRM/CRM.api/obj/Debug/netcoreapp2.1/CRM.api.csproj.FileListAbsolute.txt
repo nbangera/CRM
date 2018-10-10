@@ -1,0 +1,14 @@
+C:\Projects\Solution\CRM\CRM.api\bin\Debug\netcoreapp2.1\CRM.api.deps.json
+C:\Projects\Solution\CRM\CRM.api\bin\Debug\netcoreapp2.1\CRM.api.runtimeconfig.json
+C:\Projects\Solution\CRM\CRM.api\bin\Debug\netcoreapp2.1\CRM.api.runtimeconfig.dev.json
+C:\Projects\Solution\CRM\CRM.api\bin\Debug\netcoreapp2.1\CRM.api.dll
+C:\Projects\Solution\CRM\CRM.api\bin\Debug\netcoreapp2.1\CRM.api.pdb
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.csprojAssemblyReference.cache
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.csproj.CoreCompileInputs.cache
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.RazorAssemblyInfo.cache
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.RazorAssemblyInfo.cs
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.AssemblyInfoInputs.cache
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.AssemblyInfo.cs
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.RazorTargetAssemblyInfo.cache
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.dll
+C:\Projects\Solution\CRM\CRM.api\obj\Debug\netcoreapp2.1\CRM.api.pdb
