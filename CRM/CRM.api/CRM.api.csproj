@@ -10,6 +10,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CRM.Business\CRM.Business.csproj" />
+    <ProjectReference Include="..\CRM.Models\CRM.Models.csproj" />
+    <ProjectReference Include="..\CRM.DataStore\CRM.DataStore.csproj" />
   </ItemGroup>
 
 </Project>
