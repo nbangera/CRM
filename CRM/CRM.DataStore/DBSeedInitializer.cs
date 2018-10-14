@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using CRM.Models.Dbo;
@@ -21,6 +22,8 @@ namespace CRM.DataStore
         static string desc3 = "Guest role";
 
         static string password = "Pentium@1234";
+
+        static string organisationName = "Organisation-Test";
 
         public DBSeedInitializer(UserManager<User> userManager,
                                    RoleManager<Role> roleManager, CRMDBContext context)
@@ -46,6 +49,14 @@ namespace CRM.DataStore
             if (!Context.Users.Any())
             {
                 CreateUsers();
+            }
+            if (!Context.Organisations.Any())
+            {
+                CreateOrganisation();
+            }
+             if (!Context.Contacts.Any())
+            {
+                CreateContact();
             }
         }
 
@@ -123,6 +134,62 @@ namespace CRM.DataStore
             }
 
 
+        }
+
+        private void CreateContact()
+        {
+            var organisation = Context.Organisations.Where(t=>t.CompanyName == organisationName).SingleOrDefault();
+            var user = Context.Users.Where(t=>t.UserName == "AdminUser").SingleOrDefault();
+            Contact contact = new Contact();
+            contact.FirstName = "Contact1-FirstName";
+            contact.LastName = "Contact1-FirstName";
+            contact.DateOfBirth = DateTime.Now.AddYears(-20);
+            contact.Organisation = organisation;
+            contact.ModifiedBy = contact.CreatedBy = user;
+            contact.CreatedDate = contact.ModifiedDate = DateTime.UtcNow;
+             contact.User = user;
+            Context.Contacts.Add(contact);
+
+
+            contact = new Contact();
+            contact.FirstName = "Contact1-FirstName2";
+            contact.LastName = "Contact1-FirstName2";
+            contact.DateOfBirth = DateTime.Now.AddYears(-30);
+            contact.Organisation = organisation;
+            contact.ModifiedBy = contact.CreatedBy = user;
+            contact.CreatedDate = contact.ModifiedDate = DateTime.UtcNow;
+            contact.User = user;
+            Context.Contacts.Add(contact);
+
+            contact = new Contact();
+            contact.FirstName = "Contact1-FirstName3";
+            contact.LastName = "Contact1-FirstName3";
+            contact.DateOfBirth = DateTime.Now.AddYears(-30);
+            contact.Organisation = organisation;
+            contact.ModifiedBy = contact.CreatedBy = user;
+            contact.CreatedDate = contact.ModifiedDate = DateTime.UtcNow;
+            contact.User = user;
+            Context.Contacts.Add(contact);
+
+            Context.SaveChanges();
+        }
+
+        private void CreateOrganisation()
+        {
+             var user = Context.Users.Where(t=>t.UserName == "AdminUser").SingleOrDefault();
+            Organisation organisation = new Organisation();
+            organisation.CompanyName = organisationName;
+            organisation.ModifiedBy = organisation.CreatedBy = user;
+            organisation.CreatedDate = organisation.ModifiedDate = DateTime.UtcNow;
+            Context.Organisations.Add(organisation);
+           
+            organisation = new Organisation();
+            organisation.CompanyName = organisationName + "2";
+            organisation.ModifiedBy = organisation.CreatedBy = user;
+            organisation.CreatedDate = organisation.ModifiedDate = DateTime.UtcNow;
+            Context.Organisations.Add(organisation);
+           
+            Context.SaveChanges();
         }
     }
 
